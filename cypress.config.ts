@@ -7,6 +7,13 @@ export default defineConfig({
         supportFile: 'cypress/support/e2e.ts',
         screenshotOnRunFailure: true,
         screenshotsFolder: 'cypress/screenshots',
+        reporter: 'mochawesome',
+        reporterOptions: {
+            reportDir: 'cypress/reports',
+            overwrite: true,
+            html: true,
+            json: false
+        },
         setupNodeEvents(on, config) {
             // implement node event listeners here if needed
             return config
