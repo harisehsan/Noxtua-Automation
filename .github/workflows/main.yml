@@ -10,5 +10,11 @@ jobs:
           uses: cypress-io/github-action@v6.5.0
           with:
             start: npx http-server -p 3000
+        - name: Upload Cypress screenshots
+          if: failure()
+          uses: actions/upload-artifact@v4
+          with:
+              name: cypress-screenshots
+              path: cypress/screenshots  
             
           
