@@ -14,18 +14,10 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
 
-      # Upload screenshots only if tests fail
-      - name: Upload screenshots
-        uses: actions/upload-artifact@v3.1.3
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-
-      # Upload videos regardless of test result
-      - name: Upload videos
-        uses: actions/upload-artifact@v3.1.3
-        if: always()
-        with:
-          name: cypress-videos
-          path: cypress/videos
+      # # Upload screenshots only if tests fail
+      # - name: Upload screenshots
+      #   uses: actions/upload-artifact@v3.1.3
+      #   if: failure()
+      #   with:
+      #     name: cypress-screenshots
+      #     path: cypress/screenshots
