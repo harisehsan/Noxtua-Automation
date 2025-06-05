@@ -19,9 +19,6 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Start local server
         run: |
           npx http-server -p 3000 &
